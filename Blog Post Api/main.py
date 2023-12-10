@@ -24,7 +24,7 @@ def get_all_posts():
     posts = cursor.fetchall()
 
     if posts is not None:
-        return json.dumps({'Blogs': posts})
+        return {'Blogs': posts}
     else:
         return json.dumps({'Error': 'No Posts Found'})
 
